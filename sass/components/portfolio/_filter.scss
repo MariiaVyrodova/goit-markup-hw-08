@@ -1,0 +1,58 @@
+.portfolio__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.filter__list {
+  margin-bottom: 25px;
+
+  @media screen and (min-width: 768px) {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 35px;
+  }
+}
+
+.filter__item {
+  display: inline-flex;
+  margin-right: 8px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.filter__button {
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  background-color: $backgroundButtonPortfolio;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+
+  color: $mainTextColor;
+
+  transition: background-color 250ms $transitionTimingFunction,
+    color 250ms $transitionTimingFunction,
+    box-shadow 250ms $transitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    background-color: $backgroundButtonHover;
+    box-shadow: $shadowButtonPortfolio;
+
+    color: $textButtonHoverColorPortfolio;
+  }
+}

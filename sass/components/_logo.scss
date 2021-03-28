@@ -1,0 +1,31 @@
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+  color: $logoBasic;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.192;
+  }
+}
+
+.logo__web {
+  color: $logoWeb;
+}
+
+.logo__header {
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+.logo__footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.logo__studio {
+  color: $logoStudioFooter;
+}

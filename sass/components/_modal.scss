@@ -1,0 +1,231 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $backdropBackground;
+  opacity: 1;
+  
+  transform: translateX(0%);
+  transition: transform 250ms $transitionTimingFunction;
+
+  &.is-hidden {
+    opacity: 0; 
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-100%)
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  max-width: 450px;
+  width: 100vw;
+  max-height: 100vh;
+  padding: 40px;
+  border-radius: 4px;
+
+  background-color: $modalBackground;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform 250ms $transitionTimingFunction;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid $closeBorderColor;
+  border-radius: 50%;
+  padding: 6px;
+
+  background-color: transparent;
+
+  transition: color 250ms $transitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    color: $hoverColor;
+  }
+}
+
+.modal__title {
+  margin-bottom: 12px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  max-width: 100%;
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+
+  color: $secondaryTextColor;
+
+  transition: color 250ms $transitionTimingFunction;
+
+  &:hover {
+    color: $hoverColor;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 448px;
+  }
+}
+
+.modal__input-container {
+  position: relative;
+
+  margin-top: 4px;
+}
+
+.modal__input {
+  padding: 11px 12px 11px 42px;
+  border: 1px solid $inputBorderColorModal;
+  border-radius: 4px;
+  width: 100%;
+
+  outline: none;
+
+  font-size: 14px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+
+  transition: border-color 250ms $transitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    border-color: $hoverColor;
+  }
+
+  &:placeholder-shown {
+    font-size: 14px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal__icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+
+  fill: $mainTextColor;
+
+  transition: fill 250ms $transitionTimingFunction;
+
+  .modal__input:hover + &,
+  .modal__input:focus + & {
+    fill: $hoverColor;
+  }
+}
+
+.modal__label--indented {
+  margin-bottom: 20px;
+}
+
+.modal__input--textarea {
+  width: 370px;
+  max-width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  resize: none;
+
+  @media screen and (min-width: 1200px) {
+    min-width: 448px;
+  }
+}
+
+.policy__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 370px;
+  max-width: 100%;
+  margin-bottom: 30px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    width: 425px;
+
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.policy__icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid $policyCheckBorderColor;
+  border-radius: 2px;
+  margin-right: 8px;
+
+  transition: border 250ms $transitionTimingFunction;
+
+  .policy__input:focus + & {
+    border: 2px solid $hoverColor;
+  }
+
+  .policy__input:checked + & {
+    border: none;
+
+    background-image: url('../images/icon-checked.svg');
+  }
+}
+
+.policy__link {
+  text-decoration-line: underline;
+  color: $hoverColor;
+}
+
+.modal__sending-container {
+  text-align: center;
+}
+
+.modal__sending-button {
+  @media screen and (min-width: 1200px) {
+    padding: 10px 55px;
+  }
+}

@@ -1,0 +1,108 @@
+/* Common */
+$mainTextColor: #212121;
+$secondaryTextColor: #757575;
+$logoBasic: #000000;
+$logoWeb: #2196f3;
+$hoverColor: #2196f3;
+
+/* Header */
+$headerBorderColor: #ececec;
+
+/* Mobile menu */
+$backgroundMenuHeader: #ffffff;
+$verticalIconMenuHeader: rgba(33, 33, 33, 0.2);
+
+/* Hero */
+$heroTitleColor: #ffffff;
+$linearGradientHero: linear-gradient(
+  to right,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+);
+
+/* Advantages */
+$backgroundIcon: #f5f4fa;
+
+/* Projects */
+$workListBackground: rgba(47, 48, 58, 0.8);
+$workListTextColor: #ffffff;
+
+/* Team */
+$teamBackground: #f5f4fa;
+$personCardBackground: #ffffff;
+$personCardShadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+$colorIconTeam: #afb1b8;
+$hoverIconTeam: #ffffff;
+
+/* Customers */
+$cardColorCustomers: #afb1b8;
+
+/* Footer */
+$backgroundColorFooter: #2f303a;
+$addressColorFooter: #ffffff;
+$contactsColorFooter: rgba(255, 255, 255, 0.6);
+$joinTextColorFooter: #ffffff;
+$backgroundSocialLinkFooter: rgba(255, 255, 255, 0.1);
+$socialIconColorFooter: #ffffff;
+$subscribeLabelColorFooter: #ffffff;
+$subscribeInputBorderColor: rgba(255, 255, 255, 0.3);
+$subscribeInputTextColor: rgba(255, 255, 255, 0.6);
+
+/* Modal */
+$backdropBackground: rgba(0, 0, 0, 0.2);
+$modalBackground: #ffffff;
+$inputBorderColorModal: rgba(33, 33, 33, 0.2);
+$textareaTextColor: rgba(117, 117, 117, 0.5);
+$policyCheckBorderColor: #212121;
+$closeBorderColor: rgba(0, 0, 0, 0.1);
+
+/* Portfolio */
+$backgroundButtonPortfolio: #f5f4fa;
+$backgroundButtonHover: #2196f3;
+$shadowButtonPortfolio: 0px 3px 1px rgba(0, 0, 0, 0.1),
+  0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+$textButtonHoverColorPortfolio: #ffffff;
+$textBackgroundPortfolio: rgba(33, 150, 243, 0.9);
+$textColorPortfolio: #ffffff;
+$portfolioCardBorder: #eeeeee;
+$shadowCardPortfolio: 0px 1px 1px rgba(0, 0, 0, 0.12),
+  0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+/* Text color */
+
+$logoStudioFooter: #ffffff;
+$officeAddressColor: #ffffff;
+$contactsFooterColor: rgba(255, 255, 255, 0.6);
+
+$heroButtonColor: #ffffff;
+
+/* Header border */
+
+/* Button */
+
+/* Hero block */
+$heroColor: #2f303a;
+
+/* Advantages card */
+
+/* Work list */
+
+/* Our team */
+
+/* Regular customers */
+
+/* Card team*/
+$backgroundCardTeam: #ffffff;
+
+/* Portfolio card */
+
+/* Footer block */
+
+/* Modal */
+
+/* Card set gap */
+$cardSetGap: 30px;
+
+/* Animation */
+$transitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
