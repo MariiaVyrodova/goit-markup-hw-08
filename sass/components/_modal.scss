@@ -8,15 +8,13 @@
 
   background-color: $backdropBackground;
   opacity: 1;
-  
-  transform: translateX(0%);
-  transition: transform 250ms $transitionTimingFunction;
+  transition: opacity 250ms $transitionTimingFunction,
+    visibility 250ms $transitionTimingFunction;
 
   &.is-hidden {
-    opacity: 0; 
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translateX(-100%)
   }
 }
 
@@ -84,12 +82,15 @@
 }
 
 .modal__label {
+   position: relative;
+
   display: flex;
   flex-direction: column;
+
   width: 370px;
   max-width: 100%;
-  margin-bottom: 10px;
-
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
@@ -99,18 +100,12 @@
   transition: color 250ms $transitionTimingFunction;
 
   &:hover {
-    color: $hoverColor;
+    fill: $hoverColor;
   }
 
   @media screen and (min-width: 1200px) {
     min-width: 448px;
   }
-}
-
-.modal__input-container {
-  position: relative;
-
-  margin-top: 4px;
 }
 
 .modal__input {
@@ -125,6 +120,11 @@
   line-height: 1.167;
   letter-spacing: 0.01em;
 
+  margin-top: 4px;
+  margin-bottom: 10px;
+
+
+
   transition: border-color 250ms $transitionTimingFunction;
 
   &:hover,
@@ -136,13 +136,14 @@
     font-size: 14px;
     line-height: 1.167;
     letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+
+    color: $textareaTextColor;
   }
 }
 
 .modal__icon {
   position: absolute;
-  top: 11px;
+  top: 29px;
   left: 12px;
 
   fill: $mainTextColor;
@@ -156,7 +157,7 @@
 }
 
 .modal__label--indented {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .modal__input--textarea {
@@ -166,7 +167,6 @@
   margin-top: 4px;
   padding: 12px 16px;
   resize: none;
-  
 
   @media screen and (min-width: 1200px) {
     min-width: 448px;
@@ -174,9 +174,9 @@
 }
 
 .policy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .policy__label {
@@ -201,9 +201,6 @@
     line-height: 1.71;
   }
 }
-
-
-
 
 .policy__icon {
   width: 16px;
