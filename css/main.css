@@ -1588,7 +1588,28 @@ svg {
   border-color: #2196f3;
 }
 
-.modal__input:placeholder-shown {
+.modal__input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal__input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal__input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal__input::placeholder {
   font-size: 14px;
   line-height: 1.167;
   letter-spacing: 0.01em;
@@ -1626,6 +1647,18 @@ svg {
   .modal__input--textarea {
     min-width: 448px;
   }
+}
+
+.policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .policy__label {
